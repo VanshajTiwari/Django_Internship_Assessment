@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex justify-center items-center h-screen">
+    <div class="rounded-lg border-red-400 border-2 p-4">    
+        <h1 class="text-[20px] font-bold">Hi, {{ request.user.username }}!</h1>
+        <p class=""><a href="{% url 'profile' %}" class= "hover:text-blue-500 hover:underline" >View profile</a></p>
+    
+        <p><a href="{% url 'logout' %}" class="hover:underline hover:text-blue-500">Logout</a></p>
+    </div>
+</body>
+</html>
